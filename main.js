@@ -54,7 +54,7 @@ function update() {
 }
 
 function get() {
-    words=document.getElementById("Text1").value.split("\n")
+    words=document.getElementById("input").value.split("\n")
     question = []
     answer = []
     words.forEach(a => {
@@ -65,7 +65,7 @@ function get() {
             success: function (data) {
                 answer.push(a)
                 answer.push(a)
-                var s = {'d': data[0]['meaning']['noun'][0]['definition'].replace(RegExp(a, 'g'),a[0]+'__'+a[a.length-1]),'e': (data[0]['meaning']['noun'][0]['example']).replace(RegExp(a, 'g'),a[0]+'__'+a[a.length-1]) }
+                var s = {'d': Object.values(data[0]['meaning'])[0][0]['definition'].replace(RegExp(a, 'g'),a[0]+'__'+a[a.length-1]),'e': (Object.values(data[0]['meaning'])[0][0]['example']).replace(RegExp(a, 'g'),a[0]+'__'+a[a.length-1]) }
                 question.push(s)
                 question.push(s)
             }
@@ -75,3 +75,29 @@ function get() {
     
     
 }
+/*
+suburb
+cram
+vast
+errand
+withdraw
+deposit
+weave
+cuisine
+tempt
+stimulate
+bustling
+leather
+immense
+stereotype
+identical
+neglect
+adolescent
+sloppy
+ethical
+distort
+prejudice
+monopoly
+glamour
+peculiar
+*/
