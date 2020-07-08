@@ -63,9 +63,10 @@ function get() {
             url: 'https://api.dictionaryapi.dev/api/v1/entries/en/'+a,
             dataType: 'json',
             success: function (data) {
-                answer.push(a)
-                answer.push(a)
                 var s = {'d': Object.values(data[0]['meaning'])[0][0]['definition'].replace(RegExp(a, 'g'),a[0]+'__'+a[a.length-1]),'e': (Object.values(data[0]['meaning'])[0][0]['example']).replace(RegExp(a, 'g'),a[0]+'__'+a[a.length-1]) }
+
+                answer.push(a)
+                answer.push(a)
                 question.push(s)
                 question.push(s)
             }
