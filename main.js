@@ -1,19 +1,4 @@
 
-function sleep(milliseconds) 
-{ 
-var start = new Date().getTime(); 
-while(1)
-     if ((new Date().getTime() - start) > milliseconds)
-          break;
-}
-
-i=0
-while(true){
-alert("我愛妳"+"嗷".repeat(i));
-i++;
-sleep(Math.random()*2000+300)
-}
-
 
 var words=['cat', 'good', 'hello']
 var answer = []
