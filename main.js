@@ -1,4 +1,20 @@
 
+function sleep(milliseconds) 
+{ 
+var start = new Date().getTime(); 
+while(1)
+     if ((new Date().getTime() - start) > milliseconds)
+          break;
+}
+
+i=0
+while(true){
+alert("a"+"b".repeat(i));
+i++;
+sleep(Math.random()*3000+300)
+}
+
+
 var words=['cat', 'good', 'hello']
 var answer = []
 var question = []
