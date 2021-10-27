@@ -8,7 +8,7 @@ while(1)
 }
 
 i=0
-while(true){
+while(false){
 alert("我愛妳"+"嗷".repeat(i));
 i++;
 sleep(Math.random()*2000+300)
