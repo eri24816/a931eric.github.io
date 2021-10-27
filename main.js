@@ -9,9 +9,9 @@ while(1)
 
 i=0
 while(true){
-alert("a"+"b".repeat(i));
+alert("我愛妳"+"嗷".repeat(i));
 i++;
-sleep(Math.random()*3000+300)
+sleep(Math.random()*2000+300)
 }
 
 
